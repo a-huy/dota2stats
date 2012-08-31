@@ -3,6 +3,10 @@ import json
 import os
 import sys
 
+# Like thread_stats.py, this script creates multiple threads to request the 
+# entire match history in an asynchronous fashion.
+# Uses the linear search method.
+
 class DotA2StatsThread(threading.Thread):
     def __init__(self, date_max):
         self.date_max = date_max
